@@ -1,13 +1,21 @@
+from dotenv import load_dotenv, find_dotenv
 from pathlib import Path
+import os
+
+load_dotenv(find_dotenv())
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-SECRET_KEY = 'django-insecure-j_89af+30&&4qm*8z9_(^zz8p4-ho8z_m6ylm0s$h!-p@on1_^'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "taskiajsenandreev.ddns.net",
+    "158.160.76.140",
+    "localhost",
+    "'127.0.0.1"
+]
 
 
 # Application definition
@@ -105,11 +113,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = '/var/www/taski/static/'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000'
+    'https://taskiajsenandreev.ddns.net',
 ]
