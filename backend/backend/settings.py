@@ -13,10 +13,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "taskiajsenandreev.ddns.net",
-    "158.160.76.140",
-    "localhost",
-    "'127.0.0.1"
+    "127.0.0.1"
 ]
 
 
@@ -123,5 +120,5 @@ STATIC_ROOT = BASE_DIR / 'collected_static'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = [
-    'https://taskiajsenandreev.ddns.net',
+    'http://gateway:80',
 ]
