@@ -1,0 +1,7 @@
+#!/bin/bash
+
+mkdir /app/collected_static
+
+python /app/manage.py collectstatic --no-input
+
+cp -r /app/collected_static/. /backend_static/static/

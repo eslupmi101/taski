@@ -1,0 +1,21 @@
+version: '3'
+
+volumes:
+  static:
+
+services:
+  backend:
+    image: leadertoheaven/taski_backend:latest
+    env_file: .env
+    volumes:
+      - static:/backend_static
+  frontend:
+    image: leadertoheaven/taski_frontend:latest
+    volumes:
+      - static:/frontend_static
+  gateway:
+    image: leadertoheaven/taski_gateway:latest
+    ports:
+      - 9001:80
+    volumes:
+      - static:/staticfiles/
