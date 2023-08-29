@@ -1,5 +1,6 @@
-from pathlib import Path
+# flake8: noqa
 import os
+from pathlib import Path
 
 from dotenv import load_dotenv, find_dotenv
 
