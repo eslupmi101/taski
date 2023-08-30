@@ -10,12 +10,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    "127.0.0.1"
+    "taskiajsenandreev.ddns.net"
+    "localhost:9000",
+    "127.0.0.1",
+    "backend:8000",
+    "0.0.0.0:8000",
+    "localhost"
 ]
-
 
 # Application definition
 
